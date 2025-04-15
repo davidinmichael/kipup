@@ -1,9 +1,9 @@
 from .base import *
 import os
 
-from dotenv import loadenv
+from dotenv import load_dotenv
 
-loadenv()
+load_dotenv()
 
 DEBUG = True
 
