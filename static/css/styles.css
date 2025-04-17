@@ -69,7 +69,7 @@ button {
 @media screen and (min-width: 850px) {
   a,
   p {
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
 
   h1 {
@@ -272,6 +272,74 @@ button {
   .hero-contacts {
     gap: 20px;
   }
+}
+
+.categories {
+  width: 100%;
+  padding: var(--padding);
+  /* background-color: #fff; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.category {
+  font-weight: 600;
+  color: var(--text-color);
+  background-color: var(--secondary-color);
+  padding: var(--padding);
+  border-radius: 10px;
+}
+
+.recents {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--padding);
+  gap: 15px;
+}
+
+.kipup-card {
+  box-shadow: var(--shadow);
+  padding: var(--padding);
+  border-radius: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.card-img {
+  width: 70px;
+  height: 70px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card-info h2 {
+  font-size: 1.2rem;
+}
+
+.profile-btn {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.btn-card {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 10px 20px;
+  width: 100px;
+  text-align: center;
+  border-radius: 10px;
+
 }
 
 .card {
