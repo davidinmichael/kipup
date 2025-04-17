@@ -2,11 +2,12 @@
 
 :root {
   --primary-color: #000000;
-  --secondary-color: #;
+  --secondary-color: #fff;
   --accent-color: #;
   --header-color: #102e50;
   --text-color: #000000;
   --bg-color: #f0f1c5;
+  --logo-bg-color: #f0f1c5;
   --card-bg-color: #c0c250;
   --shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   --padding: 10px;
@@ -14,11 +15,12 @@
 
 .dark-mode {
   --primary-color: #fff;
-  --secondary-color: #;
+  --secondary-color: #000000;
   --accent-color: #;
   --header-color: #1dcd9f;
   --text-color: #fff;
   --bg-color: #000000;
+  --logo-bg-color: #f0f1c5;
   --card-bg-color: #74512d;
   --shadow: 0 0 10px rgba(212, 195, 195, 0.3);
 }
@@ -55,11 +57,14 @@ h5 {
   justify-content: space-between;
   align-items: center;
   padding: var(--padding);
+  z-index: 999;
+  background-color: var(--bg-color);
 }
 
 .menu-toggle {
   font-size: 2rem;
   display: none;
+  cursor: pointer;
 }
 
 .nav-links {
@@ -70,27 +75,138 @@ h5 {
 .nav-link {
   color: var(--text-color);
   font-weight: 600;
-  transition: all .3s;
-
+  transition: all 0.3s;
 }
 
 .color-mode {
   font-size: 2rem;
   border: none;
   cursor: pointer;
+  padding: var(--padding);
+  background-color: transparent;
 }
 
-.toggle-nav {
+.color-mode i {
+  color: var(--text-color);
+}
+
+.nav-links.toggle-nav {
   display: flex;
 }
 
+.logo {
+  background-color: var(--logo-bg-color);
+  padding: var(--padding);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 650px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: var(--bg-color);
+    position: absolute;
+    right: 0;
+    top: 12vh;
+    width: 300px;
+    align-items: flex-end;
+    padding: 10px;
+    box-shadow: var(--shadow);
+    transition: all 0.3s;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .color-mode {
+    position: absolute;
+    right: 50px;
+  }
+}
+
 .container {
-  max-width: 600px;
+  max-width: 90%;
   margin: 0 auto;
   box-shadow: var(--shadow);
+  margin-top: 13px;
+  min-height: calc(100vh - 10vh);
+}
+
+.hero {
+  background-image: url(/static/images/hero-mobile.jpeg);
+  background-position: 0;
+  background-size: cover;
   padding: var(--padding);
-  margin-top: 13vh;
-  min-height: 87vh;
+  min-height: calc(100vh - 30vh);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .4);
+}
+
+.hero-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1;
+}
+
+.hero-details h1,
+.hero-details p {
+  color: #fff;
+}
+
+.hero-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-btn {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  width: fit-content;
+  padding: var(--padding);
+  border-radius: 10px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.social-btn {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 650px) {
+  .hero {
+    background-image: url(/static/images/hero-desktop.jpg);
+    margin-top: calc(100vh - 90vh);
+
+  }
 }
 
 .card {
@@ -99,12 +215,6 @@ h5 {
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
-
-.btn {
-  width: fit-content;
-  padding: var(--padding);
-  border-radius: 10px;
 }
 
 .btn-buy {

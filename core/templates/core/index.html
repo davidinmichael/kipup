@@ -1,18 +1,33 @@
-{% extends "base.html" %}
-{% load static %}
-{% block content %}
-  <div class="title">
-	<h1>Hello World</h1>
+{% extends "base.html" %} {% load static %} {% block content %}
+<div class="hero">
+	<div class="overlay"></div>
+  <div class="hero-details">
+    <h1>You Shouldn't Miss<br />Any Gist with the World</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex, quidem.</p>
+    <div class="hero-links">
+      <div class="hero-btn">
+        <a href="#" class="btn btn-primary">Sign Up</a>
+        <a href="#" class="btn btn-secondary">Sign In</a>
+      </div>
+	  <div class="hero-contacts">
+		<button class="social-btn btn"><i class="fa-brands fa-square-whatsapp"></i></button>
+		<button class="social-btn btn"><i class="fa-brands fa-telegram"></i></button>
+	  </div>
+    </div>
+  </div>
+</div>
+<div class="title">
+  <h1>Hello World</h1>
   <p>Welcome to the land of the living my friend.</p>
   <a href="#" class="btn">Click Me</a>
+</div>
+<div class="content">
+  <div class="card">
+    <div class="img"></div>
+    <h2>Target Person</h2>
+    <p>This is the description for the product you're seeing right now.</p>
+    <p>NGN20,000</p>
+    <button class="btn btn-buy" id="productBuy">Buy Me</button>
   </div>
-  <div class="content">
-	<div class="card">
-		<div class="img"></div>
-		<h2>Target Person</h2>
-		<p>This is the description for the product you're seeing right now.</p>
-		<p>NGN20,000</p>
-		<button class="btn btn-buy" id="productBuy">Buy Me</button>
-	</div>
-  </div>
+</div>
 {% endblock content %}
