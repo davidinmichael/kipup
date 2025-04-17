@@ -5,5 +5,45 @@
 {% endblock title %}
 
 {% block content %}
-  <h1>Hello World</h1>
+<div class="content-box">
+  <div class="heading">
+    <h1>Sign Up</h1>
+  </div>
+  <form id="registerForm" class="auth-form">
+    <div class="form-group">
+      <label for="firstName">First Name</label>
+      <input type="text" id="firstName" name="first_name">
+    </div>
+    <div class="form-group">
+      <label for="lastName">Last Name</label>
+      <input type="text" id="lastName" name="last_name">
+    </div>
+    <div class="form-group">
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email">
+    </div>
+    <div class="form-group">
+      <label for="gender">Gender</label>
+      <select name="gender" id="gender">
+        <option value="">Select..</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password">
+    </div>
+    <div class="form-group">
+      <label for="confirmPassword">Confirm Password</label>
+      <input type="password" id="confirmPassword" name="confirm_password">
+    </div>
+    <div class="agree">
+      <input type="checkbox" id="agree">
+      <label for="agree">I agree to all <a href="#">Terms & Conditions</a></label>
+    </div>
+    <button class="submit-btn" id="submitBtn">Sign Up</button>
+  </form>
+  <p>Already have an account? <a href="#">Sign In</a></p>
+</div>
 {% endblock content %}

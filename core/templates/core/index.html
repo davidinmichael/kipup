@@ -6,7 +6,7 @@
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex, quidem.</p>
     <div class="hero-links">
       <div class="hero-btn">
-        <a href="#" class="btn btn-primary">Sign Up</a>
+        <a href="{% url 'register' %}" class="btn btn-primary">Sign Up</a>
         <a href="#" class="btn btn-secondary">Sign In</a>
       </div>
 	  <div class="hero-contacts">
@@ -58,18 +58,5 @@
 	</div>
 	<a href="#" class="btn btn-secondary">See More...</a>
   </div>
-<div class="title">
-  <h1>Hello World</h1>
-  <p>Welcome to the land of the living my friend.</p>
-  <a href="#" class="btn">Click Me</a>
-</div>
-<div class="content">
-  <div class="card">
-    <div class="img"></div>
-    <h2>Target Person</h2>
-    <p>This is the description for the product you're seeing right now.</p>
-    <p>NGN20,000</p>
-    <button class="btn btn-buy" id="productBuy">Buy Me</button>
-  </div>
-</div>
+
 {% endblock content %}
