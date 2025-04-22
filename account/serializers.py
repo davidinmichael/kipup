@@ -11,8 +11,12 @@ class AccountSerializer(serializers.ModelSerializer):
         fields = [
             "first_name", "last_name", "username",
             "email", "date_of_birth", "gender",
-            "account_role"
+            "account_role", "password"
         ]
+        extra_kwargs = {
+            "password": {"write_only": True}
+        }
+
         
     def validate_email(self, value):
         if Account.objects.filter(email=value).exists():
