@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+  Kipup - Register
+{% endblock title %}
+
+{% block content %}
+<div class="content-box">
+  <div class="heading">
+    <h1>Sign In</h1>
+  </div>
+  <form id="loginForm" class="auth-form">
+
+    <div class="form-group">
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email">
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password">
+    </div>
+
+    <button class="submit-btn" id="submitBtn">Sign In</button>
+  </form>
+  <p>Don't have an account? <a href="{% url 'register' %}">Sign Up</a></p>
+</div>
+{% endblock content %}

@@ -7,7 +7,7 @@ import random
 
 class AccountManager(BaseUserManager):
     def create_user(self, email, password=None, **extra_fields):
-        if not self.email:
+        if not email:
             raise ValueError("Email is required")
         email = self.normalize_email(email)
         user = self.model(email=email, **extra_fields)
@@ -32,7 +32,7 @@ class Account(AbstractUser):
     email = models.EmailField(unique=True)
     date_of_birth = models.DateField(blank=True, null=True)
     gender = models.CharField(max_length=20, null=True, blank=True)
-    account_role = models.CharField(max_length=20, null=True, blank=True)
+    account_role = models.CharField(max_length=20, null=True, blank=True, default="member")
     
     objects = AccountManager()
     USERNAME_FIELD = "email"

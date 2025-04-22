@@ -352,6 +352,7 @@ button {
   text-align: center;
   padding: 10px;
   margin: 10px 0;
+  position: relative;
 }
 
 .auth-form {
@@ -369,6 +370,7 @@ button {
 
 .form-group label {
   font-weight: 600;
+  padding: 0 10px;
 }
 
 .form-group input,
@@ -394,9 +396,62 @@ button {
   padding: 20px 0;
   font-size: 1.3rem;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .content-box > p {
   text-align: center;
   margin-top: 15px;
+}
+
+.heading i {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.profile-header {
+  background-color: var(--card-bg-color);
+  padding-bottom: 30px;
+  border-radius: 0 0 30px 30px;
+}
+
+.profile-img-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-img {
+  width: 100px;
+  height: 100px;
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  background-image: url(/static/images/DSA\ Sessions.jpg);
+  background-size: cover;
+}
+
+.profile-menus {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.menu-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--secondary-color);
+  padding: 20px 10px;
+  cursor: pointer;
+}
+
+.menu-group-icon-text {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
 }
