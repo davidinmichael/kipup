@@ -1,3 +1,4 @@
+from django.contrib.auth import login, logout
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework.views import status
@@ -49,6 +50,7 @@ class LoginApi(APIView):
                 raise NotFound("Invalid User Details")
             
             if user.check_password(password):
+                login(request, user)
                 data = {}
                 data["message"] = "Login successful!"
                 data["token"] = get_tokens_for_user(user)

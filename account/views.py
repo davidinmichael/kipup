@@ -13,4 +13,8 @@ class LoginView(View):
 
 class ProfileView(View):
     def get(self, request):
-        return render(request, "account/profile.html")
+        user = request.user
+        context = {
+            "user": user,
+        }
+        return render(request, "account/profile.html", context)
