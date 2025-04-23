@@ -21,6 +21,7 @@
     <div class="form-group">
       <label for="email">Email Address</label>
       <input type="email" id="email" name="email">
+      <p class="error" id="emailError"></p>
     </div>
     <div class="form-group">
       <label for="gender">Gender</label>
@@ -33,16 +34,17 @@
     <div class="form-group">
       <label for="password">Password</label>
       <input type="password" id="password" name="password">
+      <p class="error" id="passwordError"></p>
     </div>
     <div class="form-group">
       <label for="confirmPassword">Confirm Password</label>
       <input type="password" id="confirmPassword" name="confirm_password">
     </div>
     <div class="agree">
-      <input type="checkbox" id="agree">
+      <input type="checkbox" id="agree" checked>
       <label for="agree">I agree to all <a href="#">Terms & Conditions</a></label>
     </div>
-    <button class="submit-btn" id="submitBtn">Sign Up</button>
+    <button class="submit-btn" id="regSubmitBtn">Sign Up</button>
   </form>
   <p>Already have an account? <a href="{% url 'login' %}">Sign In</a></p>
 </div>
